@@ -15,9 +15,13 @@
 package thrift
 
 import (
+	"istio.io/pkg/log"
+
 	"github.com/aeraki-mesh/aeraki/internal/envoyfilter"
 	"github.com/aeraki-mesh/aeraki/internal/model"
 )
+
+var generatorLog = log.RegisterScope("thrift-generator", "thrift generator", 0)
 
 // Generator defines a Thrift envoyfilter Generator
 type Generator struct {
